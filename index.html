@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>form</title>
+</head>
+
+<body class="flex sm:flex-row max-sm:flex-col min-h-[100vh] text-[13px] font-SpaceGrotesk bg-white">
+
+  <img src="bg-card-back.png" class="sm:w-1/3 sm:absolute lg:left-40 sm:bottom-[12vh]
+  max-sm:w-3/4 max-sm:max-w-[370px] max-sm:absolute max-sm:right-6 max-sm:top-8 max-sm:overflow-hidden ">
+  <div class=" sm:w-1/3 sm:absolute sm:lg:left-20  sm:top-[12vh]
+              max-sm:w-3/4 max-sm:absolute max-sm:top-[10cqw] max-sm:left-6 max-sm:max-w-[370px]">
+    <div class="absolute top-5 left-8 bg-white h-[29%] w-[15%] rounded-full text-transparent">sss</div>
+    <div class="absolute top-[41px] left-28 bg-transparent h-[10%] w-[5%] rounded-full border-2 text-transparent">sss
+    </div>
+    <img src="bg-card-front.png">
+    <p id="cardNum" class="absolute bottom-14 left-6 text-[2.4cqw] max-sm:text-xl text-white"> OOOO OOOO OOOO 0000 </p>
+    <p id="cardName" class="absolute bottom-5 left-8 text-[1cqw] text-white max-sm:text-sm"> JANE APLESSED </p>
+    <p class="absolute bottom-5 right-16 text-[1cqw] text-white max-sm:text-sm"> <span id="month">00</span>/<span
+        id="year">00</span> </p>
+  </div>
+
+
+  <div class="sm:max-w-[30vw] sm:min-h-[100vh] max-sm:flex max-sm:max-h-60 bg-red-300">
+    <img src="bg-main-desktop.png" class="sm:min-h-full max-sm:hidden ">
+    <img src="bg-main-mobile.png" alt="" class="sm:hidden min-w-full max-h-full overflow-hidden ">
+  </div>
+
+  <div class="flex items-center justify-center grow">
+    <div id="firstPage" class="flex flex-col  w-[400px] h-[400px] 
+  justify-around  p-5">
+      <div id="nameDiv">
+        <p>CARDHOLDER NAME</p>
+        <input id="inputName" type="text" placeholder="e.g. Jane Appleseed" class="h-10 w-full">
+      </div>
+      <div id="numDiv">
+        <p>CARD NUMBER</p>
+        <input id="cardNumber" type="number" class="h-10 w-full" placeholder="e.g. 1234 5678 9123 0000" maxlength="16"
+          oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+      </div>
+      <div class="flex flex-row w-full max-w-full">
+        <div class="flex flex-col max-w-[50%]" id="dateDiv">
+          <p class="">Exp. Date (MM/YY)</p>
+          <div class="flex flex-row justify-between pr-5">
+            <input id="inputMonth" type="number" placeholder="MM" class="max-w-[45%] h-10" maxlength="2"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+            <input id="inputYear" type="number" placeholder="YY" class="max-w-[45%] h-10" maxlength="2"
+              oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+          </div>
+        </div>
+        <div class="max-w-[50%] h-10" id="cvcDiv">
+          <p>CVC</p>
+          <input id="inputCvc" type="number" maxlength="3" placeholder="ie.g. 123" class="max-w-full h-10"
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+        </div>
+      </div>
+      <button id="button" class="bg-purple-950 h-10 text-white rounded-md">Confirm</button>
+    </div>
+    <div id="secondPage" class="flex flex-col items-center hidden">
+      <img src="icon-complete.svg" alt="" class="max-h-32 max-w-32 pb-6">
+      <p class="text-2xl text-Darkblue pb-3">THANK YOU!</p>
+      <p class="text-xl text-gray-400 pb-5 px-10">We've added your card details</p>
+      <button id="buttonFinal" class="bg-purple-950 h-10 w-full text-white rounded-md">Continue</button>
+    </div>
+  </div>
+
+
+</body>
+
+<script type="module" src="script.js"></script>
+
+</html>
